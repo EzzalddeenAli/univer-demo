@@ -156,10 +156,18 @@
     <script>
         var demoContents = {
             sheet: `const { univerSheetCustom, CommonPluginData } = UniverPreactTs;
+
+const uiSheetsConfig = {
+    container: 'univer-demo',
+    layout: {
+      sheetContainerConfig: {
+        countBar: false,
+      },
+    },
+  };
+
 univerSheetCustom({
-    uiSheetsConfig:{
-        container:'univer-demo'
-    }
+    uiSheetsConfig
 });`,
             sheetDemo: `const demo = 'DEMO1';// or DEMO2 DEMO3 DEMO4 DEMO5 DEMO6
 
@@ -170,7 +178,7 @@ const uiSheetsConfig = {
       sheetContainerConfig: {
         infoBar: false,
         formulaBar: false,
-        toolbar,
+        toolbar: true,
         sheetBar: false,
         countBar: false,
         rightMenu: false,
@@ -243,7 +251,7 @@ const uiDocsConfig = {
       innerRight: false,
       outerLeft: false,
       infoBar: false,
-      toolbar:true,
+      toolbar: true,
     },
   },
 };
@@ -264,7 +272,7 @@ const coreConfig = UniverCore.Tools.deepClone(DEFAULT_SLIDE_DATA);
         innerRight: false,
         outerLeft: false,
         infoBar: false,
-        toolbar,
+        toolbar: true,
       },
     },
   };
